@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>xnslogmodel</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>u_int               count;
+objc_property_t*    properties= class_copyPropertyList([&lt;#model#&gt; class], &amp;count);
+    for (int i = 0; i &lt; count ; i++)
+    {
+        const char* propertyName = property_getName(properties[i]);
+        NSString *strName = [NSString  stringWithCString:propertyName encoding:NSUTF8StringEncoding];
+        NSLog(@"key-&gt; %@ value-&gt; %@",strName,[&lt;#model#&gt; valueForKey:strName]);
+    }</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>E6D1EF0F-4BB4-4185-B5B2-396CF0CFF26D</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>打印对象属性 和 值</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
